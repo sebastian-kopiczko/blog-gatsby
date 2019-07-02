@@ -4,7 +4,7 @@
   "private": true,
   "description": "Blog website build with Gatsby",
   "version": "0.1.0",
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
