@@ -1,9 +1,8 @@
 import React from "react"
-import Header from "../components/header"
+import Layout from "../components/layout"
 import SearchBar from "../components/searchbar"
 import Tags from "../components/tags"
 import Categories from "../components/categories"
-import Footer from "../components/footer"
 import PostsList from "../components/postsList"
 import Author from "../components/author"
 
@@ -12,8 +11,7 @@ const IndexPage = () => {
   const latestPosts = [{}, {}, {}]
   const popularPosts = [{}, {}, {}]
   return (
-    <div>
-      <Header />
+    <Layout>
       <PostsList list={featuredPosts} />
       <div>
         <h3>Latest Posts</h3>
@@ -30,8 +28,7 @@ const IndexPage = () => {
       </div>
       <Categories />
       <Tags />
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 export default IndexPage

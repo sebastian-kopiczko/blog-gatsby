@@ -2,7 +2,7 @@ import React from "react"
 import Post from "./post"
 
 const PostsList = props => {
-  const posts = [{}]
+  const posts = props.list
   return (
     <div>
       {posts.map((post, index) => (

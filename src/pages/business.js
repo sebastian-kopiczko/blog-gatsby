@@ -1,6 +1,11 @@
 import React from "react"
+import Layout from "../components/layout"
 
 const BusinessPage = () => {
-  return <h1>Business page</h1>
+  return (
+    <Layout>
+      <h1>Business page</h1>
+    </Layout>
+  )
 }
 export default BusinessPage

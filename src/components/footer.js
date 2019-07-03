@@ -1,8 +1,11 @@
 import React from "react"
 import SocialIcons from "./socialIcons"
 import Navigation from "./navigation"
+import PostsList from "../components/postsList"
 
 const Footer = () => {
+  const featuredPosts = [{}, {}]
+
   return (
     <footer>
       <div>
@@ -16,22 +19,7 @@ const Footer = () => {
         </div>
         <div>
           <h4>latest post</h4>
-          <ul>
-            <li>
-              <img alt="post image" src="https://via.placeholder.com/90x60" />
-              <div>
-                <h3>How to find the Blog Post Title</h3>
-                <p>Jul 2, 11:29PM</p>
-              </div>
-            </li>
-            <li>
-              <img alt="post image" src="https://via.placeholder.com/90x60" />
-              <div>
-                <h3>How to find the Blog Post Title</h3>
-                <p>Jul 2, 11:29PM</p>
-              </div>
-            </li>
-          </ul>
+          <PostsList list={featuredPosts} />
         </div>
         <div>
           <div>
