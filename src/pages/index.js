@@ -1,10 +1,10 @@
 import React from "react"
-import Layout from "../components/layout"
-import SearchBar from "../components/searchbar"
-import Tags from "../components/tags"
-import Categories from "../components/categories"
-import PostsList from "../components/postsList"
-import Author from "../components/author"
+import Layout from "../components/Layout"
+import SearchBar from "../components/Searchbar"
+import Tags from "../components/Tags"
+import Categories from "../components/Categories"
+import PostsList from "../components/PostsList"
+import Author from "../components/Author"
 
 const IndexPage = () => {
   const featuredPosts = [{}, {}]
