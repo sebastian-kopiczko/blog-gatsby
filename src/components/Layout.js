@@ -3,11 +3,11 @@ import Header from "./Header"
 import Footer from "./Footer"
 import "../styles/normalize.css"
 
-const Layout = props => {
+const Layout = ({ children }) => {
   return (
     <div style={{ backgroundColor: "#dede" }}>
       <Header />
-      {props.children}
+      {children}
       <Footer />
     </div>
   )

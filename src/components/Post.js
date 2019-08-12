@@ -1,9 +1,9 @@
 import React from "react"
 
-const Post = props => {
+const Post = ({ featuredImage, imageSource, title }) => {
   return (
     <div>
-      {props.featuredImage && <img alt={props.title} src={props.imageSource} />}
+      {featuredImage && <img alt={title} src={imageSource} />}
       <h4>post category</h4>
       <div>
         <span>John Doe</span>

@@ -1,8 +1,8 @@
 import React from "react"
 import Post from "./Post"
 
-const PostsList = props => {
-  const posts = props.list
+const PostsList = ({ list }) => {
+  const posts = list
   return (
     <div>
       {posts.map((post, index) => (

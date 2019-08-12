@@ -1,5 +1,5 @@
 import React from "react"
-const Tags = props => {
+const Tags = () => {
   const tags = [
     "Travel",
     "Adventure",

@@ -1,5 +1,5 @@
 import React from "react"
-const Categories = props => {
+const Categories = () => {
   const categories = ["Food", "Travel", "Lifestyle", "Business", "Adventure"]
   return (
     <div>
