@@ -1,7 +1,6 @@
 import React from "react"
 import SocialIcons from "./SocialIcons"
 import Navigation from "./Navigation"
-import PostsList from "./PostsList"
 
 const Footer = () => {
   const featuredPosts = [{}, {}]
@@ -19,7 +18,6 @@ const Footer = () => {
         </div>
         <div>
           <h4>latest post</h4>
-          <PostsList list={featuredPosts} />
         </div>
         <div>
           <div>
