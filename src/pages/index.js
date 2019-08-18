@@ -1,22 +1,26 @@
 import React from "react"
-import Layout from "../components/Layout"
-import SearchBar from "../components/Searchbar"
-import Tags from "../components/Tags"
-import Categories from "../components/Categories"
-import PostsList from "../components/PostsList"
-import Author from "../components/Author"
+import { graphql, Link } from "gatsby"
 
-const IndexPage = () => {
-  const featuredPosts = [{}, {}]
-  const latestPosts = [{}, {}, {}]
-  const popularPosts = [{}, {}, {}]
+import Layout from "../components/Layout"
+// import SearchBar from "../components/Searchbar"
+// import Tags from "../components/Tags"
+// import Categories from "../components/Categories"
+// import Author from "../components/Author"
+
+const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <PostsList list={featuredPosts} />
-      <div>
+      {data.allWordpressPost.edges.map(({ node: post }) => (
+        <div>
+          <Link to={post.slug}>
+            <p>{post.title}</p>
+          </Link>
+          <div dangerouslySetInnerHTML={{ __html: post.excerpt }} />
+        </div>
+      ))}
+      {/* <div>
         <h3>Latest Posts</h3>
-        <PostsList list={latestPosts} />
-        <div>* * * pagination</div>
+          <div>* * * pagination</div>
       </div>
       <div>
         <SearchBar />
@@ -24,11 +28,24 @@ const IndexPage = () => {
       <Author />
       <div>
         <h4>popular posts</h4>
-        <PostsList list={popularPosts} />
-      </div>
-      <Categories />
-      <Tags />
+      </div> */}
+      {/* <Categories />
+      <Tags /> */}
     </Layout>
   )
 }
+
 export default IndexPage
+export const pageQuery = graphql`
+  query {
+    allWordpressPost {
+      edges {
+        node {
+          title
+          excerpt
+          slug
+        }
+      }
+    }
+  }
+`
